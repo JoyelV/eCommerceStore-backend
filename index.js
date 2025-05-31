@@ -4,9 +4,9 @@ const dotenv = require('dotenv');
 const connectDB = require('./config/Db');
 const errorHandler = require('./middleware/ErrorHandler');
 
-const productRoutes = require('./routes/Product');
-const orderRoutes = require('./routes/Order');
-const authRoutes = require('./routes/Auth');
+const productRoutes = require('./routes/ProductRoutes');
+const orderRoutes = require('./routes/OrderRoutes');
+const authRoutes = require('./routes/AuthRoutes');
 
 dotenv.config();
 
