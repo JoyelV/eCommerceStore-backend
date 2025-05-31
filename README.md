@@ -1,5 +1,4 @@
 # eCommerce Store Backend
-
 This is the backend API for an eCommerce platform built with **Node.js**, **Express**, and **MongoDB**. It provides endpoints for managing products and orders, with a repository pattern for modular and maintainable code. The backend supports pagination, filtering, and simulated transactions for order processing.
 
 ## Features
@@ -43,6 +42,13 @@ Create a `.env` file in the `server/` directory with the following variables:
 ```env
 PORT=5000
 MONGODB_URI=mongodb://localhost:27017/ecommerce
+MONGO_URI=<update with mongodb connection string with db name>
+MAILTRAP_HOST=<>
+MAILTRAP_PORT=<>
+MAILTRAP_USER=<>
+MAILTRAP_PASS=<>
+JWT_SECRET=<>
+JWT_REFRESH_SECRET=<>
 ```
 
 - `PORT`: The port where the server will run (default: 5000).
@@ -68,20 +74,32 @@ The API will be available at `http://localhost:5000`.
 ## Project Structure
 ```
 server/
+├── config/  
+│   ├── Db.js  
+├── middleware/  
+│   ├── Auth.js  
+│   ├── ErrorHandler.js  
 ├── models/                 # Mongoose models
 │   ├── Product.js
 │   └── Order.js
+│   └── User.js
 ├── repositories/           # Database access layer
-│   └── productRepository.js
+│   └── ProductRepository.js
+│   └── OrderRepository.js
+│   └── UserRepository.js
 ├── services/              # Business logic
-│   ├── productService.js
-│   └── orderService.js
+│   ├── ProductService.js
+│   └── OrderService.js
+│   └── EmailService.js
+│   └── AuthService.js
 ├── controllers/           # HTTP request handlers
-│   ├── productController.js
-│   └── orderController.js
+│   ├── AuthController.js
+│   └── OrderController.js
+│   └── ProductController.js
 ├── routes/                # API routes
-│   ├── productRoutes.js
-│   └── orderRoutes.js
+│   ├── Auth.js
+│   └── Order.js
+│   └── Product.js
 ├── index.js               # Entry point
 └── package.json           # Dependencies and scripts
 ```
