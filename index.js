@@ -13,7 +13,7 @@ dotenv.config();
 const app = express();
 
 app.use(cors({
-  origin: 'https://e-commerce-store-dusky.vercel.app', 
+  origin: `${process.env.FRONTEND_URL}`, 
 }));
 
 app.use(express.json());

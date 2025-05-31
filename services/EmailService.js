@@ -25,7 +25,7 @@ class EmailService {
       <table cellpadding="0" cellspacing="0" border="0" style="width: 100%; max-width: 600px; margin: 0 auto; font-family: Arial, Helvetica, sans-serif; background-color: #f4f4f4;">
         <tr>
           <td style="background-color: #ffffff; padding: 20px; text-align: center; border-bottom: 1px solid #e5e7eb;">
-            <img src="https://static.vecteezy.com/system/resources/previews/026/235/001/non_2x/ecommerce-logo-template-vector.jpg" alt="eCommerce Store Logo" style="max-width: 150px; height: auto;" />
+            <img src=${process.env.FRONTEND_URL} alt="eCommerce Store Logo" style="max-width: 150px; height: auto;" />
           </td>
         </tr>
         <tr>
@@ -93,7 +93,7 @@ class EmailService {
               Email: ${order.customer.email}
             </p>
             <p style="text-align: center; margin: 30px 0;">
-              <a href="http://localhost:5173/thank-you/${
+              <a href="${process.env.FRONTEND_URL}/${
                 order.orderNumber
               }" style="display: inline-block; padding: 12px 24px; background-color: #2563eb; color: #ffffff; text-decoration: none; border-radius: 5px; font-size: 16px; font-weight: bold;">
                 View Your Order
@@ -108,7 +108,7 @@ class EmailService {
               Need help? <a href="mailto:support@store.com" style="color: #2563eb; text-decoration: underline;">Contact Support</a>
             </p>
             <p style="margin: 0 0 10px;">
-              <a href="http://localhost:5173" style="color: #2563eb; text-decoration: underline; margin: 0 5px;">Website</a> |
+              <a href="${process.env.FRONTEND_URL}" style="color: #2563eb; text-decoration: underline; margin: 0 5px;">Website</a> |
               <a href="#" style="color: #2563eb; text-decoration: underline; margin: 0 5px;">Facebook</a> |
               <a href="#" style="color: #2563eb; text-decoration: underline; margin: 0 5px;">Twitter</a>
             </p>
@@ -136,7 +136,7 @@ class EmailService {
                 </p>
                 <!-- CTA -->
                 <p style="text-align: center; margin: 30px 0;">
-                  <a href="http://localhost:5173/checkout" style="display: inline-block; padding: 12px 24px; background-color: #ef4444; color: #ffffff; text-decoration: none; border-radius: 5px; font-size: 16px; font-weight: bold;">
+                  <a href="${process.env.FRONTEND_URL}/checkout" style="display: inline-block; padding: 12px 24px; background-color: #ef4444; color: #ffffff; text-decoration: none; border-radius: 5px; font-size: 16px; font-weight: bold;">
                     Try Again
                   </a>
                 </p>
@@ -152,7 +152,7 @@ class EmailService {
               <td style="background-color: #f4f4f4; padding: 20px; text-align: center; font-size: 14px; color: #6b7280;">
                 <p style="margin: 0 0 10px;">We’re here to help you complete your purchase.</p>
                 <p style="margin: 0 0 10px;">
-                  <a href="http://localhost:5173" style="color: #2563eb; text-decoration: underline; margin: 0 5px;">Website</a> |
+                  <a href="${process.env.FRONTEND_URL}" style="color: #2563eb; text-decoration: underline; margin: 0 5px;">Website</a> |
                   <a href="#" style="color: #2563eb; text-decoration: underline; margin: 0 5px;">Facebook</a> |
                   <a href="#" style="color: #2563eb; text-decoration: underline; margin: 0 5px;">Twitter</a>
                 </p>
