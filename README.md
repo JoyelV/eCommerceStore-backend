@@ -43,12 +43,12 @@ Create a `.env` file in the `server/` directory with the following variables:
 PORT=5000
 MONGODB_URI=mongodb://localhost:27017/ecommerce
 MONGO_URI=<update with mongodb connection string with db name>
-MAILTRAP_HOST=<>
-MAILTRAP_PORT=<>
-MAILTRAP_USER=<>
-MAILTRAP_PASS=<>
-JWT_SECRET=<>
-JWT_REFRESH_SECRET=<>
+MAILTRAP_HOST=<enter_mailtrap_host>
+MAILTRAP_PORT=<enter_mailtrap_port>
+MAILTRAP_USER=<enter_mailtrap_user>
+MAILTRAP_PASS=<enter_mailtrap_password>
+JWT_SECRET=<enter_jwt_secret>
+JWT_REFRESH_SECRET=<enter_refresh_secret>
 ```
 
 - `PORT`: The port where the server will run (default: 5000).
